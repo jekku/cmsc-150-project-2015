@@ -1,0 +1,26 @@
+<h3> Procured Diet Plan </h3>
+
+<div class="page">
+
+
+
+	
+
+	<article>
+		<p> The daily cost of the procured diet is <strong>$<%=viewObjects.dailyCost%></strong> </p>
+	</article>
+
+	<article>
+		<p> The procured diet contains the following food items </p>
+
+		<%for(i=0;i<viewObjects.recommendedFood.length;i++){%>
+			<p> <strong> <%=viewObjects.recommendedFood[i].servings%> </strong> servings of <strong> <%=viewObjects.recommendedFood[i].name %> </strong>. Costs <strong>$<%= viewObjects.recommendedFood[i].cost%>. </strong> </p>
+		<%}%>
+
+	</article> 
+
+
+
+	<btn class="btn btn-info" id="back-to-selection">Back</btn>
+
+</div>

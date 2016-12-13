@@ -1,0 +1,57 @@
+<nutritionconstraintlist>
+	<nutritionconstraint>
+		<name> Calories </name>
+		<minimum> 2000 </minimum>
+		<maximum> 2250 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Cholesterol </name>
+		<minimum> 0 </minimum>
+		<maximum> 300 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Total Fat </name>
+		<minimum> 0 </minimum>
+		<maximum> 65 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Sodium </name>
+		<minimum> 0 </minimum>
+		<maximum> 2400 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Carbohydrates </name>
+		<minimum> 0 </minimum>
+		<maximum> 300 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Dietary Fiber </name>
+		<minimum> 25 </minimum>
+		<maximum> 100 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Protein </name>
+		<minimum> 50 </minimum>
+		<maximum> 100 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Vitamin A </name>
+		<minimum> 5000 </minimum>
+		<maximum> 50000 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Vitamin C </name>
+		<minimum> 50 </minimum>
+		<maximum> 20000 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Calcium </name>
+		<minimum> 800 </minimum>
+		<maximum> 1600 </maximum>
+	</nutritionconstraint>
+	<nutritionconstraint>
+		<name> Iron </name>
+		<minimum> 10 </minimum>
+		<maximum> 30 </maximum>
+	</nutritionconstraint>
+</nutritionconstraintlist>

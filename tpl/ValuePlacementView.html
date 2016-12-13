@@ -1,0 +1,51 @@
+<div id="value-placement-container">
+<form id="matrix-prep">
+
+	<fieldset>
+		<legend>Objective Function</legend>
+
+			<% for(j=0;j<variables;j++){ %>
+				
+				
+				<input type="number" class="input-small objectiveElement" required/>
+				X<sub><%=j+1%></sub>
+
+				<% if(j<constraints-1){ %> + <%}%>
+
+			<%}%>
+
+			&#8804 <strong> Z </strong>
+
+			<br/>
+			<input type="hidden" value="maximize">
+
+	</fieldset>
+
+	<fieldset>
+		<legend>Constraints</legend>
+
+		<% for(i=0;i<constraints;i++){  %>
+		
+			<% for(j=0;j<variables;j++){ %>
+				
+				
+				<input type="number" class="input-small matrixElement" required/>
+				X<sub><%=j+1%></sub>
+
+				<% if(j<constraints-1){ %> + <%}%>
+
+			<%}%>
+				&#8804 <input type="number" class="input-small matrixElementValue" required/>
+			<hr/>
+
+		<%}%>
+
+
+	</fieldset>
+
+	<br/>
+
+			<input type = "submit" class="btn btn-info"/>
+		<button class="btn btn-danger" id="back-to-setup">Return</button>
+	
+</div>

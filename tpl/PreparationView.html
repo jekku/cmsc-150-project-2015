@@ -1,0 +1,86 @@
+<h4> Initial Tableau and Goal Setup </h4>
+
+<%var variables = uiParams.params.variables; %>
+<%var constraints = uiParams.params.constraints; %>
+<% var letterToUse; %>
+<% if(uiParams.mode==="maximize") letterToUse="X"; 
+   else letterToUse = "Y" %>
+ 
+<div id="preparation-container">
+	<table class="table table-striped">
+		<thead>
+			<tr> 
+
+				<% for(i=0;i<variables;i++){ %>
+					<td>
+						<%=letterToUse%><sub><%=i+1%></sub>
+					</td>
+				<% } %>
+
+				<% for(i=0;i<constraints;i++){ %>
+					<td>
+						S<sub><%=i+1%></sub>
+					</td>
+				<% } %>
+
+				<td> Z </td>
+				<td> Ans </td>
+		
+			</tr>
+
+		</thead>
+
+		<tbody>
+		
+			<% var columns = variables+constraints+2 %>
+			<% var matrix = uiParams.table %>
+			<%for(i=0;i<constraints+1;i++){%>
+				<tr>
+				<%for(j=0;j<columns;j++){%>
+					<td> <%=matrix[i][j]%></td>
+				<%}%>
+				</tr>
+			<%}%>
+			
+		</tbody>
+
+	</table>
+
+	<article>
+
+				<h5> Basic Solution : </h5>
+
+				<p> <strong>
+				<% for(i=0;i<variables;i++){ %>
+					
+						X<sub><%=i+1%></sub>=<%=uiParams.basicSolution[i]%>,
+					
+				<% } %>
+
+				<% for(i=variables;i<variables+constraints;i++){ %>
+					
+						S<sub><%=i+1-variables%></sub>=<%=uiParams.basicSolution[i]%>,
+					
+				<% } %>
+
+						Z=<%=uiParams.basicSolution[variables+constraints]%>
+
+				</strong></p>
+	</article>
+
+</div>
+
+
+<hr/>
+
+<div class="page">
+	<p> Select Goal : </p>
+	<button class="btn btn-info" id="maximize-button">Maximize Z</button>
+	<button class="btn btn-danger" id="minimize-button">Minimize Z</button>
+<form id="set-goal">
+	<div class="pull-right">
+		<input type="hidden" id="goal" value=<%=uiParams.mode%>/>
+		<button class="btn btn-success">SOLVE!!</button>
+	</div>
+</form>
+</div>

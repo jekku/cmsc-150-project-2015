@@ -1,0 +1,22 @@
+<h1> DIET OPTIMIZER :D </h1>
+
+<hr/>
+
+<h3> Please Select from the following : </h3>
+
+<div class="page">
+
+	
+	<%for(i=0;i<window.foodlist.length;i++){%>
+		<span class="span3"> 
+			<input type="checkbox" class="food-checkbox" value= <%=i%>  /> 
+			<span class="checkbox-label" value= <%=i%>> <%=window.foodlist[i].name%> </span> 
+		</span>
+	<%}%>
+	
+
+</div>
+
+<div class="page" id="food-details">
+
+</div>
